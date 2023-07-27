@@ -46,9 +46,6 @@ export default function Form() {
   };
 
   const setOption = (option: any) => {
-    // let parent = findInNasted(selectedSubCategory?.options, option.id);
-    console.log('OPTION => ', option);
-
     if (!option.value) {
       getOptionOptions(option.id).then((res) => {
         dispatch(
@@ -60,13 +57,6 @@ export default function Form() {
             data: res.data.data,
           })
         );
-        // dispatch(
-        //   update({
-        //     optionId,
-        //     parent,
-        //     data: res.data.data,
-        //   })
-        // );
       });
     } else {
       dispatch(
@@ -78,13 +68,6 @@ export default function Form() {
           data: [],
         })
       );
-      // dispatch(
-      //   update({
-      //     optionId,
-      //     parent,
-      //     data: res.data.data,
-      //   })
-      // );
     }
   };
 
@@ -100,7 +83,6 @@ export default function Form() {
         parentParentIdx = i;
       }
     }
-    console.log('setChildOption => ', parentParentIdx, parent, option.id);
 
     if (!option.value) {
       getOptionOptions(option.id).then((res) => {
@@ -116,14 +98,6 @@ export default function Form() {
         );
       });
     } else {
-      // dispatch(
-      //   updateInnerPropertiesLvl_1({
-      //     optionId,
-      //     parentParentIdx,
-      //     parent,
-      //     data: res.data.data,
-      //   })
-      // );
       dispatch(
         update({
           optionId: option.id,
@@ -135,32 +109,11 @@ export default function Form() {
         })
       );
     }
-    // getOptionOptions(option.id).then((res) => {
-    //   // dispatch(
-    //   //   updateInnerPropertiesLvl_1({
-    //   //     optionId,
-    //   //     parentParentIdx,
-    //   //     parent,
-    //   //     data: res.data.data,
-    //   //   })
-    //   // );
-    //   dispatch(
-    //     update({
-    //       optionId: option.id,
-    //       name: option.name,
-    //       value: option.value,
-    //       parentParentIdx,
-    //       parent,
-    //       data: res.data.data,
-    //     })
-    //   );
-    // });
   };
 
   const setChildOptionLvl_2 = (option: any) => {
     let parent: any;
     let parentParentIdx: any;
-    console.log('setChildOption => ', parentParentIdx, parent, option.id);
     if (!option.value) {
       getOptionOptions(option.id).then((res) => {
         dispatch(

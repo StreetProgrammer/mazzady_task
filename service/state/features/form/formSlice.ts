@@ -170,7 +170,6 @@ export const formSlice = createSlice({
       }
 
       family = family.reverse();
-      console.log({ family });
 
       switch (family.length) {
         case 4:

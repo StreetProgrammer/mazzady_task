@@ -43,7 +43,6 @@ const SDropdown: React.FC<Props> = ({
       setSelected(otherOption);
       setSearchValue('');
       setOpen(false);
-      // console.log(otherOption);
     }
   };
 
@@ -93,7 +92,7 @@ const SDropdown: React.FC<Props> = ({
         {options.map((option) => (
           <li
             key={option.id}
-            className={`p-2 text-sm hover:bg-sky-600 hover:text-white 
+            className={`p-2 text-sm hover:bg-sky-600 hover:text-white hover:bg-pinkish_purple 
                             ${
                               option.name.toLowerCase().startsWith(searchValue)
                                 ? 'block'
