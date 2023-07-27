@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,4 +23,62 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+/* header */
+
+.top-search {
+  flex: 1;
+  border-right: 1px solid #fff;
+}
+
+.top-search:focus-visible {
+  outline: none;
+}
+
+/* Content */
+
+.side {
+  width: 30%;
+}
+
+.box {
+  box-shadow: 3px 5px 37px #00000017;
+  border-radius: 4px;
+}
+
+.value .person {
+  transform: translate(-50%, -9px);
+  width: 65%;
+  justify-content: space-between;
+  border: 2px solid #fff;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.details {
+  box-shadow: 3px 5px 37px #00000017;
+}
+
+.actions li {
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.bottom-search {
+  border: 1px solid #cccccc;
+}
+
+.bottom-search:focus-visible {
+  outline: none;
 }
